@@ -7,7 +7,7 @@
 Example of script launch on Linux, Python 3.5:
 
 ```bash
-madinc@Devman-Machine:~$ python3.5 pprint_json.py test.json
+~$ python3.5 pprint_json.py test.json
 [
     {
         "Cells": {
