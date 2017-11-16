@@ -1,10 +1,10 @@
-# Prettify JSON
+# Преобразователь файла формата JSON в удобный вид
 
 Скрипт по указанному пути открывает файл формата передачи данных JSON и выводит его в удобном для чтения виде.
 
-# Quickstart
+# Использование скрипта
 
-Example of script launch on Linux, Python 3.5:
+Пример запуска скрипта на Linux, Python 3.5. Путь к файлу в формате JSON указывает через пробел после указания имени программы в командной строке:
 
 ```bash
 ~$ python3.5 pprint_json.py test.json
@@ -69,6 +69,6 @@ Example of script launch on Linux, Python 3.5:
 ]
 ```
 
-# Project Goals
+# Цели проекта
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Код написан для образовательных целей, в рамках тренировочного курса "разработчик Python" - [DEVMAN.org](https://devman.org)
