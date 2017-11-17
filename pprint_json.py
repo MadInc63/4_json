@@ -5,7 +5,7 @@ import sys
 def load_data(filepath):
     try:
         with open(filepath, 'r') as json_file:
-            pretty_print_json(json.load(json_file))
+            return json.load(json_file)
     except IOError:
         print('No such file or directory')
     except ValueError:
@@ -13,8 +13,11 @@ def load_data(filepath):
 
 
 def pretty_print_json(json_data):
-    print(json.dumps(json_data, ensure_ascii=False, indent=4, sort_keys=True))
+    if json_data is not None:
+        print(json.dumps(json_data, ensure_ascii=False, indent=4, sort_keys=True))
+    else:
+        print('No data in JSON')
 
 
 if __name__ == '__main__':
-    load_data(sys.argv[1])
+    pretty_print_json(load_data(sys.argv[1]))
