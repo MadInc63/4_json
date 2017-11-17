@@ -5,13 +5,13 @@ import sys
 def load_from_json_file(filepath):
     try:
         with open(filepath, 'r') as json_file:
-            result = json.load(json_file)
+            result_of_load = json.load(json_file)
     except IOError:
         print('No such file or directory')
     except ValueError:
         print('File is empty')
     else:
-        return result
+        return result_of_load
 
 
 def pretty_print_json(json_data):
