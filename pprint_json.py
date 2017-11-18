@@ -3,14 +3,9 @@ import sys
 
 
 def load_json_file(file_path):
-    try:
-        with open(file_path, 'r') as json_file:
-            json_content = json.load(json_file)
-        return json_content
-    except (IOError, FileNotFoundError):
-        print('No such file or directory')
-    except ValueError:
-        print('File is empty')
+    with open(file_path, 'r') as json_file:
+        json_content = json.load(json_file)
+    return json_content
 
 
 def pretty_print_json(json_content_input):
@@ -19,6 +14,9 @@ def pretty_print_json(json_content_input):
 
 
 if __name__ == '__main__':
-    json_load = load_json_file(sys.argv[1])
-    if json_load is not None:
-        pretty_print_json(json_load)
+    try:
+        pretty_print_json(load_json_file(sys.argv[1]))
+    except (IOError, FileNotFoundError):
+        print('No such file or directory')
+    except ValueError:
+        print('File is empty')
